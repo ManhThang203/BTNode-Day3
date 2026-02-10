@@ -42,7 +42,7 @@ router.post("/", async (req, res, next) => {
     }
 
     const task = await Task.create({ title, completed });
-    res.status(201).success(task);
+    res.success(task, 201);
   } catch (error) {
     next(error);
   }
